@@ -1,9 +1,15 @@
 {
   "name": "@jgretz/igor-central",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "local worker logic to handle central",
   "author": "jgretz",
   "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jgretz/igor-central.git"
+  },
   "scripts": {
     "format": "prettier --write **/*.ts",
     "lint": "eslint src/**/*.ts",
