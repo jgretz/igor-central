@@ -1,0 +1,62 @@
+{
+  "name": "@jgretz/igor-central",
+  "version": "1.0.0",
+  "description": "local worker logic to handle central",
+  "author": "jgretz",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write **/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "clean-build": "rm -rf ./dist",
+    "compile": "tsc -p .",
+    "build": "yarn format && yarn lint && yarn clean-build && yarn compile",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "@jgretz/igor-data": "^1.0.2",
+    "@jgretz/igor-rabbit": "^1.0.1",
+    "@nestjs/common": "^8.0.6",
+    "@nestjs/core": "^8.0.6",
+    "@nestjs/microservices": "^8.1.0",
+    "@nestjs/typeorm": "^8.0.2",
+    "dotenv": "^10.0.0",
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "rxjs": "^7.5.1",
+    "typeorm": "^0.2.37"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^8.1.1",
+    "@nestjs/schematics": "^8.0.3",
+    "@types/node": "^16.9.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.0",
+    "ts-loader": "^9.2.5",
+    "ts-node": "^10.2.1",
+    "tsconfig-paths": "^3.11.0",
+    "typescript": "^4.4.2",
+    "webpack": "^5.65.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
