@@ -6,8 +6,8 @@ import {CENTRAL, COMMAND} from '../Types';
 @Controller()
 export class CommandController {
   constructor(rabbit: RabbitMqService) {
-    rabbit.subscribe(CENTRAL, COMMAND, (message: RabbitMessage) => {
-      Logger.log(`${CENTRAL} - ${COMMAND} - ${JSON.stringify(message.payload)}`);
+    rabbit.subscribe(COMMAND, CENTRAL, (message: RabbitMessage) => {
+      Logger.log(`${COMMAND} - ${CENTRAL} - ${JSON.stringify(message.payload)}`);
 
       return 0;
     });

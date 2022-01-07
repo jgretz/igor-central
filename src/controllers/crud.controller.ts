@@ -6,8 +6,8 @@ import {CENTRAL, CRUD} from '../Types';
 @Controller()
 export class CrudController {
   constructor(rabbit: RabbitMqService) {
-    rabbit.subscribe(CENTRAL, CRUD, (message: RabbitMessage) => {
-      Logger.log(`${CENTRAL} - ${CRUD} - ${JSON.stringify(message.payload)}`);
+    rabbit.subscribe(CRUD, CENTRAL, (message: RabbitMessage) => {
+      Logger.log(`${CRUD} - ${CENTRAL} - ${JSON.stringify(message.payload)}`);
 
       return 0;
     });
