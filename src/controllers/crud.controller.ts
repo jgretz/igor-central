@@ -1,13 +1,13 @@
 import {Controller} from '@nestjs/common';
 import {RabbitMessage, RabbitMqService} from '@jgretz/igor-rabbit';
-import {DataArgs, DataEvents} from '@jgretz/igor-data';
+import {DataArgs, DataEvents, ITypeORMService} from '@jgretz/igor-data';
 import {CENTRAL, CRUD} from '../Types';
 import {StatsService} from '../services';
 
 @Controller()
 export class CrudController {
   constructor(rabbit: RabbitMqService, statsService: StatsService) {
-    const map: {[key: string]: any} = {
+    const map: {[key: string]: ITypeORMService} = {
       stats: statsService,
     };
 
@@ -32,7 +32,7 @@ export class CrudController {
           return await service.update(crudMessage.id, crudMessage.body);
 
         case DataEvents.Delete:
-          return await service.delete(crudMessage.id);
+          return await service.remove(crudMessage.id);
       }
     });
   }

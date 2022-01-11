@@ -125,10 +125,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
-"@jgretz/igor-data@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@jgretz/igor-data/-/igor-data-1.0.2.tgz#6bbb0799616b8e046d183cf495493ad75dafe299"
-  integrity sha512-0FNUA9xGj8rXjJffM6BlMd5fYOKjVTQAvj71W0clOs+QTRDV5EjGayb76Yw4uRGfJY6pRIT79GRVSsB8AlhlUg==
+"@jgretz/igor-data@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@jgretz/igor-data/-/igor-data-1.0.4.tgz#b6de4a28b93f6e2b41b84d9f7f5d9efdba4b481c"
+  integrity sha512-Szs6ubTJ5MlMh04QllWPLI9R3qjhCuRrY9EFA8WGiQLZtseaPqQ8UholajqY/xbVfJFh9dBNUMW/U2wKnHEdrA==
   dependencies:
     "@nestjs/common" "^8.1.2"
     "@nestjs/core" "^8.1.2"
@@ -141,10 +141,10 @@
   resolved "https://registry.yarnpkg.com/@jgretz/igor-log/-/igor-log-1.0.4.tgz#37958c1f1384338407396c4bfe6a0b4d33873da9"
   integrity sha512-5V6X59R0jR+ghmXmyD4TPG4o+eMTMs6BoHp8AKdqzc+cEzBASb8m2+vPTwAOhAwuE/hFQHrdOwyMO3d2nPL4Wg==
 
-"@jgretz/igor-rabbit@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@jgretz/igor-rabbit/-/igor-rabbit-1.0.1.tgz#9569f2482e500bdbc883e3d06c82e70c074315dd"
-  integrity sha512-oLTWgeGv+ZmLwzL60EbQXYdE9jchQb9hnFsRej+VtyC0zrHV/G/I7xm+9XBnoLMXTUnRvaR1KQL7aHgAJOzTcw==
+"@jgretz/igor-rabbit@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@jgretz/igor-rabbit/-/igor-rabbit-1.0.3.tgz#5b808078ec078063e3891e18b5a3ddb789887f42"
+  integrity sha512-Y/LtKPyCYhDZftVy/UaFTpm9ccHm7YxIWD9msUnG/F4DTvmP9H0e7vxaDRHhvRq2Vt/XsiWWL2IpDjnCte0THw==
   dependencies:
     "@jgretz/igor-log" "^1.0.0"
     amqplib "^0.8.0"
