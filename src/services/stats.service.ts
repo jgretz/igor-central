@@ -1,3 +1,5 @@
+import {InjectRepository} from '@nestjs/typeorm';
+import {Repository} from 'typeorm';
 import {TypeORMService} from '@jgretz/igor-data';
 import {Stats} from '../entities';
 import {FindStatsDto, CreateStatsDto, UpdateStatsDto} from '../dto';
@@ -10,6 +12,13 @@ export class StatsService extends TypeORMService<
   CreateStatsDto,
   UpdateStatsDto
 > {
+  constructor(
+    @InjectRepository(Stats)
+    repo: Repository<Stats>,
+  ) {
+    super(repo);
+  }
+
   async find(): Promise<Array<Stats>> {
     const only = await this.findOne();
     return [only];
