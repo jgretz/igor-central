@@ -1,24 +1,33 @@
-// import {Injectable} from '@nestjs/common';
-// import {InjectRepository} from '@nestjs/typeorm';
-// import {Repository} from 'typeorm';
+import {TypeORMService} from '@jgretz/igor-data';
+import {Stats} from '../entities';
+import {FindStatsDto, CreateStatsDto, UpdateStatsDto} from '../dto';
 
-// import {Stats} from '../entities';
-// import {CENTRAL_DB} from '../../constants';
+const STATS_ID = 1;
 
-// const STATS_ID = 1;
+export class StatsService extends TypeORMService<
+  Stats,
+  FindStatsDto,
+  CreateStatsDto,
+  UpdateStatsDto
+> {
+  async find(): Promise<Array<Stats>> {
+    const only = await this.findOne();
+    return [only];
+  }
 
-// @Injectable()
-// export class StatsService {
-//   constructor(
-//     @InjectRepository(Stats, CENTRAL_DB)
-//     private stats: Repository<Stats>,
-//   ) {}
+  findOne(): Promise<Stats> {
+    return super.findOne(STATS_ID);
+  }
 
-//   find(): Promise<Stats> {
-//     return this.stats.findOne(STATS_ID);
-//   }
+  create(body: CreateStatsDto): Promise<Stats> {
+    return super.update(STATS_ID, {...body, id: STATS_ID});
+  }
 
-//   save(stats: Stats): Promise<Stats> {
-//     return this.stats.save(stats);
-//   }
-// }
+  update(id: number, body: UpdateStatsDto): Promise<Stats> {
+    return super.update(STATS_ID, {...body, id: STATS_ID});
+  }
+
+  remove(): Promise<void> {
+    return;
+  }
+}

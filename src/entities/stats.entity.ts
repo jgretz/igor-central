@@ -1,10 +1,8 @@
-import {Column, Entity, PrimaryGeneratedColumn} from 'typeorm';
+import {Column, Entity} from 'typeorm';
+import {BaseEntity} from '@jgretz/igor-data';
 
 @Entity()
-export class Stats {
-  @PrimaryGeneratedColumn()
-  id: number;
-
+export class Stats extends BaseEntity {
   @Column()
-  ping: Date;
+  last_ping?: Date;
 }
