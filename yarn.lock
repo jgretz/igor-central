@@ -60,10 +60,10 @@
   resolved "https://registry.yarnpkg.com/@jgretz/igor-log/-/igor-log-1.0.4.tgz#37958c1f1384338407396c4bfe6a0b4d33873da9"
   integrity sha512-5V6X59R0jR+ghmXmyD4TPG4o+eMTMs6BoHp8AKdqzc+cEzBASb8m2+vPTwAOhAwuE/hFQHrdOwyMO3d2nPL4Wg==
 
-"@jgretz/igor-rabbit@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@jgretz/igor-rabbit/-/igor-rabbit-1.0.3.tgz#5b808078ec078063e3891e18b5a3ddb789887f42"
-  integrity sha512-Y/LtKPyCYhDZftVy/UaFTpm9ccHm7YxIWD9msUnG/F4DTvmP9H0e7vxaDRHhvRq2Vt/XsiWWL2IpDjnCte0THw==
+"@jgretz/igor-rabbit@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@jgretz/igor-rabbit/-/igor-rabbit-1.0.4.tgz#9f8334f7529fd62d2c7c9c2e84505fbbd1113ede"
+  integrity sha512-M6IKkHKQz6dqNZgmtCjOcO/ICcq6jfTPYI6MW/JXGxdu7e+JE6D8NbTxs4flh2U+6DOnb3QQnA94NhiKt1Zl3w==
   dependencies:
     "@jgretz/igor-log" "^1.0.0"
     amqplib "^0.8.0"

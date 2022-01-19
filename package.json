@@ -1,6 +1,6 @@
 {
   "name": "@jgretz/igor-central",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "local worker logic to handle central",
   "author": "jgretz",
   "license": "MIT",
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@jgretz/igor-data": "^1.0.5",
-    "@jgretz/igor-rabbit": "^1.0.3",
+    "@jgretz/igor-rabbit": "^1.0.4",
     "@nestjs/common": "^8.2.4",
     "@nestjs/core": "^8.2.4",
     "@nestjs/microservices": "^8.2.4",
