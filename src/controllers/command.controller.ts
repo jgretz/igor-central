@@ -1,15 +1,11 @@
 import {Controller} from '@nestjs/common';
-import Logger from '@jgretz/igor-log';
-import {RabbitMessage, RabbitMqService} from '@jgretz/igor-rabbit';
-import {CENTRAL, COMMAND} from '../Types';
+import {RabbitMqService} from '@jgretz/igor-rabbit';
+import {CommandController} from '@jgretz/igor-data-microservice';
+import {CENTRAL} from '../Types';
 
 @Controller()
-export class CommandController {
+export class CentralCommandController extends CommandController {
   constructor(rabbit: RabbitMqService) {
-    rabbit.subscribe(COMMAND, CENTRAL, (message: RabbitMessage) => {
-      Logger.log(`${COMMAND} - ${CENTRAL} - ${JSON.stringify(message.payload)}`);
-
-      return 0;
-    });
+    super(rabbit, CENTRAL, {});
   }
 }

@@ -43,10 +43,24 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@jgretz/igor-data@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@jgretz/igor-data/-/igor-data-1.0.5.tgz#f85299203bd7587624516955a20794871a8c3a61"
-  integrity sha512-rL3a0L/WsDE/cVMQwx4jXMpzMBinO+FHqheh0WQ9991vIUQH/JV1EaqMcAP+YoCyLo14Lq12jHENEj5Q33Ws1w==
+"@jgretz/igor-data-microservice@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@jgretz/igor-data-microservice/-/igor-data-microservice-1.0.0.tgz#630d8f82df8c5ceec4abf46d042e60b0a51fc4cb"
+  integrity sha512-iVjyZHh+4u3nqm242HM91f93UWI7Sh0A2B03SCZF9Q3o4/WUgYnOMdthGMkLegWj0dwF3OXT5VBihs9YirggPA==
+  dependencies:
+    "@jgretz/igor-data" "^1.0.6"
+    "@jgretz/igor-rabbit" "^1.0.5"
+    "@nestjs/common" "^8.2.4"
+    "@nestjs/core" "^8.2.4"
+    "@nestjs/microservices" "^8.2.4"
+    "@nestjs/typeorm" "^8.0.2"
+    rxjs "^7.5.2"
+    typeorm "^0.2.41"
+
+"@jgretz/igor-data@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@jgretz/igor-data/-/igor-data-1.0.6.tgz#2ba35c1ae47c5116d914f9a72b2062b051b9177c"
+  integrity sha512-e/astENeg40MxVeRv9eULe1IjaoKaKHj86AetUvkVF0dRpFO1VjblS33PN2ET7rIHpCEj4t7IcG4vV2g2UxBJw==
   dependencies:
     "@nestjs/common" "^8.2.4"
     "@nestjs/core" "^8.2.4"
@@ -60,10 +74,10 @@
   resolved "https://registry.yarnpkg.com/@jgretz/igor-log/-/igor-log-1.0.4.tgz#37958c1f1384338407396c4bfe6a0b4d33873da9"
   integrity sha512-5V6X59R0jR+ghmXmyD4TPG4o+eMTMs6BoHp8AKdqzc+cEzBASb8m2+vPTwAOhAwuE/hFQHrdOwyMO3d2nPL4Wg==
 
-"@jgretz/igor-rabbit@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@jgretz/igor-rabbit/-/igor-rabbit-1.0.4.tgz#9f8334f7529fd62d2c7c9c2e84505fbbd1113ede"
-  integrity sha512-M6IKkHKQz6dqNZgmtCjOcO/ICcq6jfTPYI6MW/JXGxdu7e+JE6D8NbTxs4flh2U+6DOnb3QQnA94NhiKt1Zl3w==
+"@jgretz/igor-rabbit@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@jgretz/igor-rabbit/-/igor-rabbit-1.0.5.tgz#f1b7fa4fe6831fd78a588dda89e71b959c531783"
+  integrity sha512-xelJ7aNEkxMX3xG3TjVfpyS7JGnfgChCpEEfh9DWbq1b/XvvLWAX6AAZnrkkW1E1PPp0vI6t+gbzjmLxRc9aJw==
   dependencies:
     "@jgretz/igor-log" "^1.0.0"
     amqplib "^0.8.0"
