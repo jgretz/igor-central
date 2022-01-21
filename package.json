@@ -11,12 +11,14 @@
     "url": "git@github.com:jgretz/igor-central.git"
   },
   "scripts": {
-    "format": "prettier --write **/*.ts",
-    "lint": "eslint src/**/*.ts",
-    "clean-build": "rm -rf ./dist",
-    "compile": "tsc -p .",
-    "build": "yarn format && yarn lint && yarn clean-build && yarn compile",
-    "prepublishOnly": "yarn build"
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "eslint \"{src,apps,libs}/**/*.ts\" --fix"
   },
   "dependencies": {
     "@jgretz/igor-data": "^1.0.6",
@@ -25,7 +27,9 @@
     "@nestjs/common": "^8.2.4",
     "@nestjs/core": "^8.2.4",
     "@nestjs/microservices": "^8.2.4",
+    "@nestjs/platform-express": "^8.2.4",
     "@nestjs/typeorm": "^8.0.2",
+    "dotenv": "^11.0.0",
     "pg": "^8.7.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
@@ -33,6 +37,9 @@
     "typeorm": "^0.2.41"
   },
   "devDependencies": {
+    "@nestjs/cli": "^8.1.8",
+    "@nestjs/schematics": "^8.0.5",
+    "@types/express": "^4.17.13",
     "@types/node": "^17.0.8",
     "@typescript-eslint/eslint-plugin": "^5.9.1",
     "@typescript-eslint/parser": "^5.9.1",
