@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@jgretz/igor-data": "^1.0.6",
-    "@jgretz/igor-data-microservice": "^1.0.5",
+    "@jgretz/igor-data-microservice": "^1.0.6",
     "@jgretz/igor-rabbit": "^1.0.10",
     "@jgretz/igor-shared": "^1.0.0",
     "@nestjs/common": "^8.2.6",
